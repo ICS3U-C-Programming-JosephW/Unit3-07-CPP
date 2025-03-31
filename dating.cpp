@@ -16,6 +16,14 @@ adhere to the style guidelines. */
 
 // Runs the main function.
 int main() {
+    // Set constants for minimum and maximum age expectations.
+    const int MIN_AGE_EXPECT = 25,
+    MAX_AGE_EXPECT = 40;
+
+    // Set constants for the minimum and maximum possible age.
+    const int MIN_POSSIBLE_AGE = 0,
+    MAX_POSSIBLE_AGE = 120;
+
     // Declare the string variable for the user's age.
     std::string ageAsString;
 
@@ -32,10 +40,10 @@ int main() {
         age = std::stoi(ageAsString);
 
         // Check if the user is older than 25 and younger than 40.
-        if ((age > 25) && (age < 40)) {
+        if ((age > MIN_AGE_EXPECT) && (age < MAX_AGE_EXPECT)) {
             // Display the user is approved of dating the grandchild.
             std::cout << "\nYou are approved of dating our grandchild.\n";
-        } else if ((age < 0) || (age > 120)) {
+        } else if ((age < MIN_POSSIBLE_AGE) || (age > MAX_POSSIBLE_AGE)) {
             /* Also, check if the user enters an 
             invalid age not between 0 and 120. */
             // Display the user needs to enter a valid age.
